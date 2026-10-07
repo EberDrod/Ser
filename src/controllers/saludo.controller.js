@@ -3,4 +3,9 @@ function obtenerSaludo(req, res) {
   res.json({ mensaje: 'Hola Juliette', conectado: true });
 }
 
-module.exports = { obtenerSaludo };
+function obtenerSaludoDos(req, res) {
+  console.log(`[${new Date().toISOString()}] Botón 2 presionado -> enviando saludo dos`);
+  res.json({ mensaje: 'Hola Eber', conectado: true });
+}
+
+module.exports = { obtenerSaludo, obtenerSaludoDos };
